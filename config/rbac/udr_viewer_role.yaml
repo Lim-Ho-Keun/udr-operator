@@ -1,0 +1,27 @@
+# permissions for end users to view udrs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: udr-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: udr-operator
+    app.kubernetes.io/part-of: udr-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: udr-viewer-role
+rules:
+- apiGroups:
+  - fiveg.kt.com
+  resources:
+  - udrs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - fiveg.kt.com
+  resources:
+  - udrs/status
+  verbs:
+  - get

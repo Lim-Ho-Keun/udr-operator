@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-udr
+  labels:
+    app: svc-udr
+  namespace: 5gc-udr
+spec:
+  #type: ClusterIP
+  #clusterIP: None
+  ports:
+  - port: 80
+    targetPort: 80
+    name: http2
+    #protocol: TCP
+    #  - port: 443
+    #    targetPort: 443
+    #    name: https
+    #protocol: TCP
+  selector:
+    app: udr
+

@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: udr-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: UDR is the Schema for the udrs API
+      displayName: UDR
+      kind: UDR
+      name: udrs.fiveg.kt.com
+      version: v1alpha1
+  description: udr-operator
+  displayName: udr-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - udr
+  links:
+  - name: Udr Operator
+    url: https://udr-operator.domain
+  maintainers:
+  - email: hokeun.lim@kt.com
+    name: hokeun
+  maturity: alpha
+  provider:
+    name: kt
+  version: 0.0.0

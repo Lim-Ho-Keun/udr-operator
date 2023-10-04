@@ -1,0 +1,13 @@
+apiVersion: fiveg.kt.com/v1alpha1
+kind: UDR
+metadata:
+  labels:
+    app.kubernetes.io/name: udr
+    app.kubernetes.io/instance: udr-sample
+    app.kubernetes.io/part-of: udr-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: udr-operator
+  name: udr
+  namespace: 5gc-udr
+spec:
+  # TODO(user): Add fields here
